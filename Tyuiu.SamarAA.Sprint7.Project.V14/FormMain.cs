@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using Tyuiu.SamarAA.Sprint7.Project.V14.Lib;
 using System.IO;
 
@@ -19,7 +20,7 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14
             InitializeComponent();
         }
         DataService ds = new DataService();
-        string path = @"C:\DataSprint6\Schedule1.csv";
+        string path = @"C:\DataSprint6\Schedule1.csv"; // поменять путь при его изменении 
 
         private void textBoxNom_SAA_TextChanged(object sender, EventArgs e)
         {
@@ -151,7 +152,8 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14
 
         private void buttonDelete_SAA_Click(object sender, EventArgs e)
         {
-            FileInfo fileInfo = new FileInfo(@"C:\Users\Андрей\source\repos\Tyuiu.SamarAA.Sprint7\Tyuiu.SamarAA.Sprint7.Project.V14\bin\Debug\Сохраненные маршруты.csv");
+            //FileInfo fileInfo = new FileInfo(@"C:\Users\Андрей\source\repos\Tyuiu.SamarAA.Sprint7\Tyuiu.SamarAA.Sprint7.Project.V14\bin\Debug\Сохраненные маршруты.csv");
+            FileInfo fileInfo = new FileInfo(savePath);
             bool fileExists = fileInfo.Exists;
             if (fileExists)
             {

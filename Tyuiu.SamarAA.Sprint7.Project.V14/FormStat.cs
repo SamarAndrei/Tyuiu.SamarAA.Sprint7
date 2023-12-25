@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using Tyuiu.SamarAA.Sprint7.Project.V14.Lib;
 using System.IO;
 
@@ -20,7 +21,7 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14
         }
 
         DataService ds = new DataService();
-        string path = @"C:\DataSprint6\Schedule1.csv";
+        string path = @"C:\DataSprint6\Schedule1.csv"; // путь
 
         private void buttonStatOk_SAA_Click(object sender, EventArgs e)
         {
@@ -37,6 +38,15 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14
             {
                 chartStat_SAA.Series[0].Points.AddXY(vid[i], stat[i]);
             }
+
+            textBoxStatMin_SAA.Text = Convert.ToString(ds.GetStatMin(path));
+            textBoxStatAvg_SAA.Text = Convert.ToString(ds.GetStatAvg(path));
+            textBoxStatMax_SAA.Text = Convert.ToString(ds.GetStatMax(path));
+        }
+
+        private void chartStat_SAA_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

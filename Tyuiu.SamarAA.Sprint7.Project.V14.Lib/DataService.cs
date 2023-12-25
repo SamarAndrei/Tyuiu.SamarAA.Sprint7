@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.IO;
 
 namespace Tyuiu.SamarAA.Sprint7.Project.V14.Lib
@@ -63,6 +64,75 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14.Lib
             res[1] = mini;
 
             return res;
+        }
+
+        public int GetStatMin(string path)
+        {
+            int count = 0;
+            int min = 1000;
+            string fileData = File.ReadAllText(path);
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            
+            foreach(string line in lines)
+            {
+                string[] str = line.Split(';');
+                for(int i = 0; i < str.Length; i++)
+                {
+                    count += 1;
+                }
+                count -= 2;
+                min = Math.Min(min, count);
+                count = 0;
+            }
+
+            return min;
+        }
+
+        public int GetStatAvg(string path)
+        {
+            int count = 0;
+            int avt = 0;
+            int avg = 0;
+            string fileData = File.ReadAllText(path);
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string line in lines)
+            {
+                string[] str = line.Split(';');
+                for (int i = 0; i < str.Length; i++)
+                {
+                    count += 1;
+                }
+                count -= 2;
+                avt += 1;
+            }
+
+            return count/avt;
+        }
+
+        public int GetStatMax(string path)
+        {
+            int count = 0;
+            int max = 0;
+            string fileData = File.ReadAllText(path);
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string line in lines)
+            {
+                string[] str = line.Split(';');
+                for (int i = 0; i < str.Length; i++)
+                {
+                    count += 1;
+                }
+                count -= 2;
+                max = Math.Max(max, count);
+                count = 0;
+            }
+
+            return max;
         }
     }
 }

@@ -42,9 +42,12 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14
             this.pictureBoxGuidSearch_SAA = new System.Windows.Forms.PictureBox();
             this.buttonGuidOk_SAA = new System.Windows.Forms.Button();
             this.labelGuidInfo_SAA = new System.Windows.Forms.Label();
+            this.pictureBoxDelete_SAA = new System.Windows.Forms.PictureBox();
+            this.labelGuidDelete_SAA = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuid_SAA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuidbuttons_SAA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuidSearch_SAA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete_SAA)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxGuid_SAA
@@ -159,12 +162,32 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14
             this.labelGuidInfo_SAA.TabIndex = 11;
             this.labelGuidInfo_SAA.Text = "*Маршруты до 30 номера";
             // 
+            // pictureBoxDelete_SAA
+            // 
+            this.pictureBoxDelete_SAA.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDelete_SAA.Image")));
+            this.pictureBoxDelete_SAA.Location = new System.Drawing.Point(524, 215);
+            this.pictureBoxDelete_SAA.Name = "pictureBoxDelete_SAA";
+            this.pictureBoxDelete_SAA.Size = new System.Drawing.Size(100, 81);
+            this.pictureBoxDelete_SAA.TabIndex = 12;
+            this.pictureBoxDelete_SAA.TabStop = false;
+            // 
+            // labelGuidDelete_SAA
+            // 
+            this.labelGuidDelete_SAA.AutoSize = true;
+            this.labelGuidDelete_SAA.Location = new System.Drawing.Point(626, 241);
+            this.labelGuidDelete_SAA.Name = "labelGuidDelete_SAA";
+            this.labelGuidDelete_SAA.Size = new System.Drawing.Size(132, 26);
+            this.labelGuidDelete_SAA.TabIndex = 13;
+            this.labelGuidDelete_SAA.Text = "Кнопка удаления \r\nсохраненных маршрутов";
+            // 
             // FormGuid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.labelGuidDelete_SAA);
+            this.Controls.Add(this.pictureBoxDelete_SAA);
             this.Controls.Add(this.labelGuidInfo_SAA);
             this.Controls.Add(this.buttonGuidOk_SAA);
             this.Controls.Add(this.pictureBoxGuidSearch_SAA);
@@ -188,6 +211,7 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuid_SAA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuidbuttons_SAA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuidSearch_SAA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete_SAA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,5 +231,7 @@ namespace Tyuiu.SamarAA.Sprint7.Project.V14
         private System.Windows.Forms.PictureBox pictureBoxGuidSearch_SAA;
         private System.Windows.Forms.Button buttonGuidOk_SAA;
         private System.Windows.Forms.Label labelGuidInfo_SAA;
+        private System.Windows.Forms.PictureBox pictureBoxDelete_SAA;
+        private System.Windows.Forms.Label labelGuidDelete_SAA;
     }
 }
